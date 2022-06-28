@@ -17,34 +17,35 @@
 		<input type="checkbox" id="switch"/>
 		<label class="form__switch" for="switch"></label>
 		<div class="form__block">
-
 			<div class="signup__block">
 				<div class="form__title">Sign Up</div>
-				<div class="username__block">
-					<input type="text" name="username" placeholder="Your Full Name">
-				</div>
 				<div class="email__block">
-					<input type="text" name="email" placeholder="Your Email">
+					<input type="text" name="email" placeholder="Your Email" class="signup__input" id="signup__email">
 				</div>
 				<div class="password__block">
-					<input type="password" name="password" placeholder="Your Password">
+					<input type="password" name="password" placeholder="Your Password" class="signup__input" id="signup__password">
 				</div>
-				<button class="submit">SUBMIT</button>
+				<div class="password__block">
+					<input type="password" name="password" placeholder="Confirm Your Password" class="signup__input" id="confirm__password">
+				</div>
+				<button class="submit" id="signup__submit">SUBMIT</button>
 			</div>
-
 			<div class="login__block">
 				<div class="form__title">Log In</div>
 				<div class="email__block">
-					<input type="text" name="email" placeholder="Your Email">
+					<input type="text" name="email" placeholder="Your Email" class="login__input">
 				</div>
 				<div class="password__block">
-					<input type="password" name="password" placeholder="Your Password">
+					<input type="password" name="password" placeholder="Your Password" class="login__input">
 				</div>
-				<button class="submit">SUBMIT</button>
+				<button class="submit" id="login__submit">SUBMIT</button>
 				<a href="#" class="forgot-pass">Forgot your password?</a>
 			</div>
-
 		</div>
+	</div>
+	<div id="popup">
+		<span class="popup__text">You did not enter the data</span>
+		<button id="popup__close">x</button>
 	</div>
 
 	<script src="script.js"></script>
