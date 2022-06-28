@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	color: #B7B9C2;
+	transition: 0.2s all ease;
+}
+body {
+	background: #1A1C22;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	
+}
+.form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.form__state {
+	width: 200px;
+	display: flex;
+	justify-content: space-between;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 38px 0px;
+}
+.form__title {
+	font-size: 26px;
+	font-weight: bold;
+	margin: 30px 0px;
+	transform: translateZ(30px);
+	backface-visibility: hidden;
+}
+.form__block {
+	width: 420px;
+	height: 420px;
+	position: relative;
+	perspective: 1000px;
+}
+.login__block, .signup__block {
+	background: #292735;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	position: absolute;	
+	left: 0;	
+	top: 0;
+	transition: 1s;
+	backface-visibility: hidden;
+	perspective: 1000px;
+	transform-style: preserve-3d;
+}
+.signup__block {
+	transform: rotateY(180deg);
+}
+#switch:checked ~ .form__block .login__block {transform: rotateY(180deg);}
+#switch:checked ~ .form__block .signup__block {transform: rotateY(360deg);}
+
+.email__block, .password__block, .username__block{
+	width: 80%;
+	position: relative;
+	transform: translateZ(30px);
+	backface-visibility: hidden;
+}
+input {
+	width: 100%;
+	font-size: 18px;
+	border: 1px solid #1A1C22;
+	border-radius: 4px;
+	background: #1A1C22;
+	margin: 7px 0px;
+	padding: 12px 15px 12px 45px;
+	outline: none;
+	box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+.submit {
+	font-size: 14px;
+	font-weight: bold;
+	color: #1A1C22;
+	background: #FBE59A;
+	padding: 12px 30px;
+	border: 1px solid #FBE59A;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 25px 0px;
+	transform: translateZ(30px);
+	box-shadow: 0px 7px 65px -18px #FBE59A;
+	backface-visibility: hidden;
+}
+.submit:hover {
+	background-color: #112264;
+	border: 1px solid #112264;
+	color: #FBE59A;
+	box-shadow: none;
+}
+.forgot-pass {
+	margin: 10px 0px 30px 0px;
+	text-decoration: none;
+	transform: translateZ(30px);
+	backface-visibility: hidden;
+}
+.forgot-pass:hover {
+	color: #FBE59A;
+}
+.form__switch {
+	width: 75px;
+	margin-bottom: 45px;
+	height: 18px;
+	background: #FBE59A;
+	border-radius: 8px;
+	cursor: pointer;
+}
+#switch {
+	display: none;
+}
+.email__block:before {
+	font-family: 'icomoon' !important;
+	content: "\e900";
+	position: absolute;
+	top: 17px;
+	left: 13px;
+	color: #FBE59A;
+	font-size: 24px;
+}
+.password__block:before {
+	font-family: 'icomoon' !important;
+	content: "\e902";
+	position: absolute;
+	top: 17px;
+	left: 13px;
+	color: #FBE59A;
+	font-size: 24px;
+}
+.username__block:before {
+	font-family: 'icomoon' !important;
+	content: "\e901";
+	position: absolute;
+	top: 17px;
+	left: 13px;
+	color: #FBE59A;
+	font-size: 24px;
+}
+.form__switch:before {
+	font-family: 'icomoon' !important;
+	content: "\ea39";
+	position: relative;
+	top: -9px;
+	left: -5px;
+	background: #112264;
+	border-radius: 50%;
+	padding: 8px;
+	color: #FBE59A;
+	font-size: 20px;
+	display: inline-block;
+	transition: 0.8s all ease-in-out;
+}
+#switch:checked ~ .form__switch:before {
+	transform: rotate(-270deg);
+	left: 50px;
+}
